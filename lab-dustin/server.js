@@ -5,10 +5,10 @@ const debug = require('debug')('http');
 const createError = require('http-errors');
 const express = require('express');
 const app = express();
+const response = require('./lib/response.js');
 
 app.get('/',function(req,res){
-  debug('Homepage');
-  res.end();
+  response.sendText(res,200,'routed');
 });
 
 app.get('/notes',function(req,res){
@@ -28,3 +28,5 @@ app.post('*',(req,res) => {
 app.listen(PORT,function(){
   debug(`Listening on port ${PORT}`);
 });
+
+exports.app = app;

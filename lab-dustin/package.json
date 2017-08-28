@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "cross-env DEBUG=http PORT=3000",
-    "test": "npm run build mocha",
+    "test": "mocha",
     "test:watch": "npm run build mocha -w",
     "start": "npm run build nodemon server.js",
     "lint": "eslint ."
@@ -22,7 +22,10 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
+    "chai-fs": "^1.0.0",
+    "chai-string": "^1.4.0",
     "eslint": "^4.5.0",
+    "mocha": "^3.5.0",
     "nodemon": "^1.11.0",
     "supertest": "^3.0.0"
   }
