@@ -1,8 +1,6 @@
 'use strict';
 
 const fs = require('fs');
-const store = require('../lib/storage');
-const response = require('../lib/response');
 const uuid = require('uuid');
 
 exports.noteRoutes = function(router){

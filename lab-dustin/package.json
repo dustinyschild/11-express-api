@@ -4,10 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "cross-env DEBUG=http PORT=3000",
-    "test": "mocha",
-    "test:watch": "npm run build mocha -w",
-    "start": "npm run build nodemon server.js",
+    "test": "cross-env DEBUG=http mocha",
+    "test:watch": "cross-env DEBUG=http mocha -w",
+    "start": "cross-env DEBUG=http nodemon server.js",
     "lint": "eslint ."
   },
   "author": "",

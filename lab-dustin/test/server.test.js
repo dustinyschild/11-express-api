@@ -16,16 +16,12 @@ describe('GET /', function(){
   it('should return not found for missing path', function(done){
     request.get('/404')
       .expect(404)
-      .expect('Not Found')
-      .expect('content-type', 'text/plain')
       .end(done);
   });
 
   it('should return not found for POST missing path', function(done){
     request.post('/404')
       .expect(404)
-      .expect('Not Found')
-      .expect('content-type', 'text/plain')
       .end(done);
   });
 });
