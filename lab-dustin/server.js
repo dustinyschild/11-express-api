@@ -29,4 +29,4 @@ app.listen(PORT,function(){
   debug(`Listening on port ${PORT}`);
 });
 
-exports.app = app;
+module.exports = app;
